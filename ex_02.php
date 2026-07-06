@@ -18,12 +18,12 @@ return [
 
 }
 
-$texto_usuario = "Programação em PHPI @2024 #ç-å";
+$texto_usuario = "Feijão com farinha!";
 
-echo "Texto original: Stexto_usuario <br>";
+echo "Texto original: $texto_usuario <br>";
 
 $resultado = inverterTexto($texto_usuario);
 
 echo "Texto invertido: " . $resultado["invertido"] . "<br>";
 echo "Quantidade de caracteres: " . $resultado["quantidade"].
-"ebr>";
+"<br>";
