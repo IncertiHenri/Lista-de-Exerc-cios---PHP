@@ -1,0 +1,39 @@
+<?php
+/* Exercício 04 – Gerador de Senhas
+Uma empresa deseja gerar senhas temporárias para seus colaboradores.
+Crie uma função chamada gerarSenha() que receba a quantidade de caracteres
+desejada e retorne uma senha aleatória contendo letras maiúsculas, minúsculas,
+números e caracteres especiais. */
+
+function gerarSenha($tamanho){
+
+// rand() numero aleatorio
+// strlen() retorna o tamanho
+$letras = array("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+$especiais = array("!","@","#","$","%","&");
+$quantidade = $tamanho;
+
+for($i = 0; $i < $quantidade; $i++){
+
+    $numeroEspeciais = rand(0,5);
+
+    $numeroLetras = rand(0,51);
+
+    $numeroNumeros = rand(0,9);
+
+    $embaralhar = array($letras[$numeroLetras], $especiais[$numeroEspeciais], $numeroNumeros);
+
+    $numeroEmbaralhar = rand(0,2);
+
+    $senha[$i] = $embaralhar[$numeroEmbaralhar];
+    }
+
+    $senha = implode("", $senha);
+
+    return $senha;
+
+}
+
+echo gerarSenha(15);
+
+?>
