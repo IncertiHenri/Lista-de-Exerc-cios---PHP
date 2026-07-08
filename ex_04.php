@@ -28,9 +28,9 @@ for($i = 0; $i < $quantidade; $i++){
     $senha[$i] = $embaralhar[$numeroEmbaralhar];
     }
 
-    $senha = implode("", $senha);
+    $senhaGerada = implode("",$senha);
 
-    return $senha;
+    return $senhaGerada;
 
 }
 
